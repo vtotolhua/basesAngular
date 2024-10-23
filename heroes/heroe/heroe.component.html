@@ -1,0 +1,34 @@
+<h1>{{nombre}}</h1>
+<dl>
+<td>Nombre:</td>
+<dd>{{nombre}}</dd>
+
+<td>Edad:</td>
+<dd>{{ edad }}</dd>
+
+<td>Método</td>
+<dd>{{ getConcatNomEdad () }}</dd>
+
+<td>nombr mayúsculas</td>
+<dd> {{ nombreMayusculas }}</dd>
+</dl>
+
+<button
+  *ngIf="nombre !== 'Sofi e Hilaria'"
+  (click)="ChangeNom()"
+  class="btn btn-primary mx-2">
+  cambiar Nombre
+</button>
+
+<button
+  *ngIf="edad !== 80"
+  (click)="ChangeEdad()"
+  class="btn btn-primary mx-2" >
+  cambiar edad
+</button>
+<button
+(click)="resetName()"
+class="btn btn-primary mx-2">
+  Reset
+</button>
+

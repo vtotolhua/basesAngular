@@ -1,0 +1,25 @@
+<p>Recetarios</p>
+
+<div *ngIf="ingreBorrado; else noIngreborrado">
+  <h3 > Ingrediente Borrado: <small class="text-danger">{{ ingreBorrado }}</small> </h3>
+</div>
+
+
+<ng-template #noIngreborrado>
+  <h3 >No ha borrado nada.</h3>
+</ng-template>
+
+
+<button
+*ngIf="ingredientesNombres.length > 0 "
+  (click)="removeLastIngrediente()"
+  class="btn btn-outline-danger">
+  Borrar ultimo ingrediente
+</button>
+
+<h2>Ingredientes</h2>
+<ul class="mt-2 list-group">
+  <li
+    *ngFor="let ingrediente of ingredientesNombres"
+    class="list-group-item">{{ ingrediente }}</li>
+</ul>
