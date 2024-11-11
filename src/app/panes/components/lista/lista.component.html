@@ -1,0 +1,66 @@
+
+
+<h4>Ingredientes</h4>
+<ul class="list-group">
+  <li
+    *ngFor="
+    let ingrediente of ingreList;
+    let i = index;
+    let isFirst = first;
+    let isLast = last
+    let isEven = even;
+    let isOdd = odd;
+    "
+    class="list-group-item d-flex justify-content-between"
+    [ngClass]="{
+      'list-group-item-primary': isEven
+    }">
+
+    <div>
+      <span>{{ ingrediente.cantidad}} <strong> - </strong> </span>
+      <span> {{ingrediente.nombreIngre}} </span>
+    </div>
+     <!-- <form (ngSubmit)="OnDeleteID(i)">
+    <button (click)="emmitIndex(i)"  class="btn btn-danger" > X </button>
+     </form> -->
+     <button (click)="OnDeleteByID (ingrediente.recetaid)"  class="btn btn-danger" > X </button>
+
+  </li>
+</ul>
+<br>
+
+
+<!--
+<li *ngFor="
+    let ingrediente of ingreList;
+    let isfirst = first;
+    let islast = last;
+    let i = index;
+    "
+    class="list-group-item";
+    > {{ ingrediente.cantidad}} - {{ingrediente.nombreIngre}}
+</li>
+
+
+
+
+***************************************************
+<ul class="list-group">
+<h4 *ngFor="let ingreodiente of ingreList
+let isfirst= first
+"
+[ngClass]="{'text-danger': isfirst }"> {{ ingreodiente.receta }} </h4>
+<br>
+<h3 class="text-primary">Ingredientes</h3>
+  <li *ngFor="
+    let ingrediente of ingreList;
+    let islast = last;
+    let i = index;
+    "
+    class="list-group-item"
+    [ngClass]="{'list-group-item-success': islast }">
+    {{i+1}}   {{ ingrediente.cantidad}} - {{ingrediente.nombreIngre}}
+  </li>
+</ul>
+
+-->

@@ -1,0 +1,15 @@
+<h1>Recetario Works!</h1>
+<hr>
+<div class="row">
+  <div class="col">
+    <panes-lista [ingreList]="ingrediente"
+                  (onDeleteID)="onDeleteID($event)"></panes-lista>
+    <!--(onDeleteID)="recetasService.onDeleteID($event)"></panes-lista>-->
+  </div>
+
+  <div class="col">
+    <panes-agrega-Ingre  (onNewIngrediente)="onNewIngrediente($event)"></panes-agrega-Ingre>
+  </div>
+
+</div>
+

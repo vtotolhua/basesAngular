@@ -1,0 +1,35 @@
+
+<h4>Agregar Ingrediente</h4>
+
+<form class="row" (ngSubmit)="recibirIngredientes()">
+
+  <input type="text"
+    [(ngModel)]="agregaIngrediente.cantidad"
+    name="cantidad"
+    class="form-control mb-2"
+    placeholder="Cantidad">
+
+  <input type="text "
+  [(ngModel)]="agregaIngrediente.nombreIngre"
+  name="nombreIngre"
+  class="form-control mb-2"
+  placeholder="nombre">
+
+  <input type="text"
+  [(ngModel)]="agregaIngrediente.receta"
+  name="receta"
+  class="form-control mb-2"
+  placeholder="receta">
+
+  <input type="text"
+  [(ngModel)]="agregaIngrediente.modoPreparacion"
+  name="preparacion"
+  class="form-control mb-2"
+  placeholder="modoPreparacion">
+
+  <button type="submit"
+  class="btn btn-primary">
+    Agregar
+  </button>
+
+</form>
